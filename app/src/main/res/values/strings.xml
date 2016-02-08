@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">HGerard</string>
+    <string name="addToCart">Ajouter au panier</string>
+    <string name="coverAltDescription">Couverture</string>
+    <string name="price">Prix : </string>
+    <string name="title">Titre :</string>
+    <string name="isbn">ISBN :</string>
+    <string name="confirmationAjout">"Livre ajouté au panier : "</string>
+</resources>
