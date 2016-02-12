@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.FrameLayout;
 import android.widget.Toast;
 
 import fr.hgerard.model.Book;
@@ -18,6 +19,10 @@ public class LibraryActivity extends AppCompatActivity implements BookRecyclerAd
     private Book currentBook;
     private boolean landscape;
 
+    // Pour les tests
+    FrameLayout mainFrameLayout;
+    FrameLayout secondFrameLayout;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,6 +34,10 @@ public class LibraryActivity extends AppCompatActivity implements BookRecyclerAd
 
         this.landscape = getResources().getBoolean(R.bool.landscape);
         this.bookListFragment = getSupportFragmentManager().findFragmentByTag(BookListFragment.class.getSimpleName());
+
+        // Pour les tests
+        mainFrameLayout = (FrameLayout) findViewById(R.id.mainFrameLayout);
+        secondFrameLayout = (FrameLayout) findViewById(R.id.secondFrameLayout);
 
         if (bookListFragment == null) {
             this.bookListFragment = new BookListFragment();
